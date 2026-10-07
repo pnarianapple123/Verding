@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Verding</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,700;0,800;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Verd<span>ing</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div class="wrap">
+        <p class="eyebrow">Projects</p>
+        <h1>The garden</h1>
+        <p>New research notes and project case studies as they evolve.</p>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <div class="filters" role="group" aria-label="Filter posts">
+          <button aria-pressed="true" data-filter="all">All</button>
+          <button aria-pressed="false" data-filter="Case study">Case studies</button>
+          <button aria-pressed="false" data-filter="Research note">Research notes</button>
+        </div>
+
+        <div class="grid">
+          <!-- Copy one <article> block for every new post -->
+          <article class="card" data-type="Case study">
+            <div class="thumb"><!-- <img src="images/post-1.jpg" alt="..."> --></div>
+            <div class="body">
+              <span class="tag">Case study</span>
+              <h3>Project title one</h3>
+              <p>A short summary of the question you asked, the data you used and what you concluded.</p>
+              <a class="more" href="#">Read more</a>
+            </div>
+          </article>
+
+          <article class="card" data-type="Research note">
+            <div class="thumb"></div>
+            <div class="body">
+              <span class="tag">Research note</span>
+              <h3>Project title two</h3>
+              <p>A short summary of the question you asked, the data you used and what you concluded.</p>
+              <a class="more" href="#">Read more</a>
+            </div>
+          </article>
+
+          <article class="card" data-type="Case study">
+            <div class="thumb"></div>
+            <div class="body">
+              <span class="tag">Case study</span>
+              <h3>Project title three</h3>
+              <p>A short summary of the question you asked, the data you used and what you concluded.</p>
+              <a class="more" href="#">Read more</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html">Verd<span>ing</span></a>
+          <p>A greenhouse for sustainable chemical engineering ideas, still growing.</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/your-name">LinkedIn</a></li>
+            <li><a href="https://github.com/your-name">GitHub</a></li>
+            <li><a href="mailto:you@example.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2026 Verding. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Filter buttons: show only cards matching the chosen type
+    const buttons = document.querySelectorAll('.filters button');
+    const cards = document.querySelectorAll('.card');
+    buttons.forEach(btn => btn.addEventListener('click', () => {
+      buttons.forEach(b => b.setAttribute('aria-pressed', b === btn));
+      cards.forEach(c => {
+        c.hidden = btn.dataset.filter !== 'all' && c.dataset.type !== btn.dataset.filter;
+      });
+    }));
+  </script>
+</body>
+</html>
