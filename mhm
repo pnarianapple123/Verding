@@ -1,0 +1,103 @@
+# Project Title Here
+
+**Type:** Case Study / Research Note  
+**Date:** YYYY-MM-DD  
+**Status:** Seedling / Growing / Harvested  
+**Repository Link:** https://github.com/pnarianapple123/your-activity-repo  
+
+---
+
+## 1. Quick Summary
+Write 2–3 sentences explaining the core question, dataset, or problem investigated.
+
+## 2. Key Takeaways & Methodology
+- Step 1: Data collection / setup
+- Step 2: Main findings or calculations
+- Step 3: Conclusions & next steps
+
+## 3. Key Code Snippet
+```python
+# Paste your 5-10 line key snippet here
+def calculate_metric(data):
+    return data * 0.85
+
+
+
+
+
+# (HTML snippet to copy into projects.html)
+
+<div class="card" data-type="case-study">
+  <p class="tag">Case study</p>
+  <h2>Project Title Here</h2>
+  <p>Write 2-3 sentences explaining the summary here.</p>
+  <a class="more" 
+     href="[https://github.com/pnarianapple123/your-activity-repo](https://github.com/pnarianapple123/your-activity-repo)" 
+     target="_blank" 
+     rel="noopener noreferrer">
+     View Code on GitHub →
+  </a>
+</div>
+
+
+
+
+# (To give each project its specific URL)
+---
+
+### Option 2: Blank HTML Template (`project-template.html`)
+
+If you prefer an HTML file that you can duplicate whenever you decide to build out dedicated sub-pages:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Title | Verding</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html">Verding</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <article>
+      <h1>Project Title Here</h1>
+      <p class="meta">Published: YYYY-MM-DD | Category: Research Note</p>
+
+      <section>
+        <h2>Overview</h2>
+        <p>Short summary of the activity or code...</p>
+      </section>
+
+      <section>
+        <h2>Key Code Snippet</h2>
+        <pre><code>
+// Add key snippet here
+        </code></pre>
+      </section>
+
+      <section>
+        <p>
+          <a class="btn" 
+             href="https://github.com/pnarianapple123/YOUR-REPO-NAME" 
+             target="_blank" 
+             rel="noopener noreferrer">
+             View Repository on GitHub →
+          </a>
+        </p>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2026 Verding. All rights reserved.</p>
+  </footer>
